@@ -8,7 +8,9 @@ body{
 .container{
     position: relative;
     height: 100%;
-    background-color: #6A89A7;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 30px;
 }
 header{
@@ -17,7 +19,7 @@ header{
     left: 0;
     width: 90%;
     padding: 25px 5%;
-    background-color: #BDDDFC;
+    background-color: #b3d1bb;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,3 +67,4 @@ header{
 .btn:hover{
     color: red;
 }
+
