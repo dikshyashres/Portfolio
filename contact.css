@@ -62,5 +62,31 @@ form input[type="submit"] {
 form input[type="submit"]:hover{
     color: black;
 }
-
+header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 90%;
+    padding: 35px 5%;
+    background-color: #b3d1bb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a{
+    font-size: 18px;
+    color: black;
+    text-decoration: solid;
+    font-weight: 500;
+    margin-left: 35px;
+}
+.navbar a:hover{
+    color: red;
+}
+.logo{
+    font-size: 25px;
+    color: black;
+    text-decoration: solid;
+    font-weight: 600;
+}
 
