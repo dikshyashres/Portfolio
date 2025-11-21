@@ -1,0 +1,66 @@
+body{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact {
+    width: 45%;
+    color: black;
+    margin-top: 100px;
+}
+
+.contact h1 {
+    font-size: 40px;
+    color: cadetblue;
+}
+.contact h2 {
+    font-size: 24px;
+    color: cadetblue;
+}
+.contact h3 {
+    font-size: 18px;
+}
+
+.form {
+    width: 45%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+.requirements{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex;
+    padding: 100px;
+}
+form input[type="submit"] {
+    width: 150px;       
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background: cadetblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+}
+form input[type="submit"]:hover{
+    color: black;
+}
+
+
