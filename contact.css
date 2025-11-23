@@ -1,9 +1,11 @@
 body {
-  height: 100%;
-  background-image: url(bg.jpeg);
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 5%;
+  margin: 0;
+  overflow: hidden;
 }
 .contact {
   width: 50%;
@@ -17,7 +19,7 @@ body {
   margin-bottom: 10px;
 }
 .contact h1 span {
-  color: #411ea5;
+  color: #ffd700;
 }
 .contact h2 {
   font-size: 26px;
@@ -62,14 +64,15 @@ form input[type='submit'] {
   margin-top: 15px;
   border: 1px solid #666;
   border-radius: 5px;
-  background: rgb(125, 90, 125);
-  color: white;
+  background: #ffd700;
+  color: #1e3c72;
   font-weight: bold;
   cursor: pointer;
   align-self: center;
 }
 form input[type='submit']:hover {
   color: black;
+  background: #ffed4a;
 }
 header {
   background: transparent;
@@ -85,7 +88,7 @@ header {
   font-weight: 600;
 }
 .logo span {
-  color: #411ea5;
+  color: #ffd700;
 }
 .navbar a {
   font-size: 20px;
@@ -95,5 +98,5 @@ header {
   margin-left: 35px;
 }
 .navbar a:hover {
-  color: red;
+  color: #ffd700;
 }
