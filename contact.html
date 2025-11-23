@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="contact.css">
-</head>
-<body>
-  <header>
-        <a href="portfolio" class="logo">Portfolio.</a>
-         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="project">Project</a>
-            <a href="contact.html">Contact</a>
-         </nav>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="icon" type="image/png" href="fa.jpg" />
+  </head>
+  <body>
+    <header>
+      <a href="portfolio" class="logo">Port<span>folio</span>.</a>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
-  <div class="requirements">
-    <div class="contact">
-      <h1>Get In Touch</h1> 
-      <h2>I'd like to hear from you!!</h2>
-      <h3>If you have any inquiry or just want to say hi,please use the contact form.</h3>
+    <div class="requirements">
+      <span class="contact">
+        <h1>Get In <span>Touch</span></h1>
+        <h2>I'd like to hear from you!!</h2>
+        <h3>
+          If you have any inquiry or just want to say hi,please use the contact
+          form.
+        </h3>
+      </span>
+      <div class="form">
+        <form action="nthg.php">
+          <label for="fname">First Name</label>
+          <input type="text" class="fname" required="requirements" />
+          <label for="lname">Last Name</label>
+          <input type="text" name="lname" id="lname" required="requirements" />
+          <label for="email">Email</label>
+          <input type="email" required="requirements" />
+          <label for="message">Message</label>
+          <textarea id="w3review" name="w3review" rows="4" cols="50">
+At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+</textarea
+          >
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </div>
-    <div class="form">
-      <form action="nthg.php">
-        <label for="fname" >First Name</label>
-        <input type="text" class="fname" required="requirements">
-        <label for="lname">Last Name</label>
-        <input type="text" name="lname" id="lname" required="requirements">
-        <label for="email">Email</label>
-        <input type="text" required="requirements">
-        <label for="message">Message</label>
-        <input type="text" required="requirements">
-        <input type="submit" value="Submit" >
-      </form>
-    </div>
-  </div>
-
-</body>
+  </body>
 </html>
