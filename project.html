@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,34 +7,66 @@
     <link rel="stylesheet" href="project.css" />
     <link rel="icon" type="image/png" href="fa.jpg" />
   </head>
+
   <body>
     <div class="container">
       <header>
         <a href="portfolio" class="logo">Port<span>folio</span>.</a>
         <nav class="navbar">
           <a href="index.html">Home</a>
-          <a href="project.html">Project</a>
+          <a href="project.html" class="active">Project</a>
           <a href="contact.html">Contact</a>
         </nav>
       </header>
+
       <div class="topic">
-        <h1>My Project</h1>
+        <h1>My Projects</h1>
         <h2>Some of my distinguished work</h2>
       </div>
-      <section class="box">
-        <div class="p1">
-            <img src="threat.jpg" alt="threat">
-            <h3>Threat Detection System</h3>
-        </div>
-        <div class="p2">
-            <img src="tictac.jpg" alt="game">
-            <h4>Tic-Tac-Toe</h4>
-        </div>
-       <div class="p3">
-        <img src="neuro.png" alt="neuro">
-        <h5>NeuroVison</h5>
 
-       </div>
+      <section class="box">
+        <!-- Project 1 -->
+        <div class="card">
+          <img src="threat.jpg" alt="Threat Detection System" />
+          <h3>Threat Detection System</h3>
+          <div class="buttons">
+            <a
+              href="https://github.com/dikshyashres/Threat-Detection-YOLOv8-.git"
+              target="_blank"
+              class="btn code"
+              >Code</a
+            >
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card">
+          <img src="tictac.jpg" alt="Tic Tac Toe" />
+          <h3>Tic-Tac-Toe Game</h3>
+          <div class="buttons">
+            <a
+              href="https://github.com/dikshyashres/tic-tac-toe.git"
+              target="_blank"
+              class="btn code"
+              >Code</a
+            >
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card">
+          <img src="neuro.png" alt="NeuroVision" />
+          <h3>NeuroVision</h3>
+          <div class="buttons">
+            <a
+              href="https://github.com/dikshyashres/NeuroVision.git"
+              target="_blank"
+              class="btn code"
+              >Code</a
+            >
+          </div>
+        </div>
       </section>
+    </div>
   </body>
 </html>
