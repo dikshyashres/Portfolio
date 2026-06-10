@@ -6,6 +6,10 @@
     <title>Project</title>
     <link rel="stylesheet" href="project.css" />
     <link rel="icon" type="image/png" href="fa.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -25,7 +29,6 @@
       </div>
 
       <section class="box">
-        <!-- Project 1 -->
         <div class="card">
           <img src="threat.jpg" alt="Threat Detection System" />
           <h3>Threat Detection System</h3>
@@ -36,10 +39,12 @@
               class="btn code"
               >Code</a
             >
+            <button class="btn demo" onclick="openDemo('threat-demo.mp4')">
+              <i class="fa-solid fa-circle-play"></i> Demo
+            </button>
           </div>
         </div>
 
-        <!-- Project 2 -->
         <div class="card">
           <img src="tictac.jpg" alt="Tic Tac Toe" />
           <h3>Tic-Tac-Toe Game</h3>
@@ -50,10 +55,12 @@
               class="btn code"
               >Code</a
             >
+            <button class="btn demo" onclick="openDemo('tictac-demo.mp4')">
+              <i class="fa-solid fa-circle-play"></i> Demo
+            </button>
           </div>
         </div>
 
-        <!-- Project 3 -->
         <div class="card">
           <img src="neuro.png" alt="NeuroVision" />
           <h3>NeuroVision</h3>
@@ -64,9 +71,69 @@
               class="btn code"
               >Code</a
             >
+            <button class="btn demo" onclick="openDemo('neuro-demo.mp4')">
+              <i class="fa-solid fa-circle-play"></i> Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="ncell.jpg" alt="Ncell Certification & Compliant Website" />
+          <h3>Ncell Certification &amp; Compliant</h3>
+          <div class="buttons">
+            <a
+              href="https://www.ncell.com.np/en/business/certifications"
+              target="_blank"
+              class="btn demo"
+            >
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="todo.png" alt="Simple Todo List" />
+          <h3>Simple Todo List</h3>
+          <div class="buttons">
+            <a
+              href="https://github.com/dikshyashres/Simple-todo-list.git"
+              target="_blank"
+              class="btn code"
+              >Code</a
+            >
+            <button class="btn demo" onclick="openDemo('todo_list.mp4')">
+              <i class="fa-solid fa-circle-play"></i> Demo
+            </button>
           </div>
         </div>
       </section>
     </div>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeDemo()">
+      <div class="modal-box" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeDemo()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <video id="modalVideo" controls autoplay></video>
+      </div>
+    </div>
+
+    <script>
+      function openDemo(src) {
+        const overlay = document.getElementById('modalOverlay')
+        const video = document.getElementById('modalVideo')
+        video.src = src
+        overlay.classList.add('active')
+        video.play()
+      }
+
+      function closeDemo() {
+        const overlay = document.getElementById('modalOverlay')
+        const video = document.getElementById('modalVideo')
+        video.pause()
+        video.src = ''
+        overlay.classList.remove('active')
+      }
+    </script>
   </body>
 </html>
