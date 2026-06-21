@@ -6,21 +6,29 @@
 }
 
 body {
-  height: 100vh;
   background-color: #f0fdfa;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 5%;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
+/* IMAGE RESPONSIVE */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CONTAINER */
 .container {
-  width: 103%;
-  height: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
 }
 
-/* Header */
+/* HEADER */
 header {
   background: #ffffff;
   padding: 14px 24px;
@@ -30,6 +38,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -57,16 +66,18 @@ header {
   color: #0d9488;
 }
 
-/* Home Layout */
+/* HOME SECTION */
 .home {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 148px;
+  margin-top: 100px;
+  gap: 40px;
 }
 
+/* TEXT SIDE */
 .detail {
-  margin-top: -47px;
+  margin-top: 0;
 }
 
 .detail h1 {
@@ -95,7 +106,7 @@ header {
   font-size: 15px;
 }
 
-/* CTA Button */
+/* BUTTON */
 .btn {
   display: inline-block;
   padding: 12px 32px;
@@ -113,23 +124,20 @@ header {
 
 .btn:hover {
   background: #0f766e;
-  color: #ffffff;
   transform: translateY(-2px);
 }
 
-/* Profile Area */
+/* PROFILE IMAGE */
 .profile-area {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 .blob {
   width: 320px;
   height: 400px;
   background: linear-gradient(135deg, #0d9488 0%, #5dcaa5 100%);
-  position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -144,13 +152,78 @@ header {
   height: 90%;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.6s ease,
-    box-shadow 0.6s ease;
 }
 
 .blob:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 30px 60px rgba(13, 148, 136, 0.35);
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .navbar a {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 50px;
+    gap: 30px;
+  }
+
+  .detail p {
+    max-width: 100%;
+  }
+
+  .blob {
+    width: 250px;
+    height: 320px;
+  }
+
+  .detail h1 {
+    font-size: 32px;
+  }
+
+  .detail h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail h1 {
+    font-size: 26px;
+  }
+
+  .detail h3 {
+    font-size: 18px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .blob {
+    width: 220px;
+    height: 280px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }

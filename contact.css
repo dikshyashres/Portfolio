@@ -6,115 +6,21 @@
 }
 
 body {
-  height: 100vh;
   background-color: #f0fdfa;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px 5%;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-/* Contact Info */
-.contact {
-  width: 50%;
-  color: #0f172a;
-  margin-top: 148px;
+/* IMAGE RESPONSIVE */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.contact h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #0f172a;
-}
-
-.contact h1 span {
-  color: #0d9488;
-}
-
-.contact h2 {
-  font-size: 26px;
-  color: #0f766e;
-}
-
-.contact h3 {
-  font-size: 18px;
-  color: #64748b;
-}
-
-/* Form Container */
-.form {
-  width: 45%;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 20px;
-  border: 1px solid #b2f0e8;
-  box-shadow: 0 8px 30px rgba(13, 148, 136, 0.1);
-}
-
-form label {
-  margin-top: 12px;
-  color: #0f766e;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-form input {
-  padding: 10px 14px;
-  margin-top: 6px;
-  border: 1.5px solid #b2f0e8;
-  border-radius: 10px;
-  font-size: 15px;
-  color: #0f172a;
-  background: #f0fdfa;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-
-form input:focus {
-  border-color: #0d9488;
-  background: #ffffff;
-}
-
-.requirements {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 55px;
-}
-
-form input[type='submit'] {
-  width: 160px;
-  padding: 12px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 25px;
-  background: #0d9488;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  align-self: center;
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-}
-
-form input[type='submit']:hover {
-  background: #0f766e;
-  transform: translateY(-2px);
-}
-
-/* Header */
+/* HEADER */
 header {
   background: #ffffff;
   padding: 14px 24px;
@@ -124,6 +30,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -150,22 +57,179 @@ header {
 .navbar .active {
   color: #0d9488;
 }
+
+/* CONTACT LAYOUT */
+.requirements {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 55px;
+  gap: 40px;
+}
+
+/* CONTACT TEXT */
+.contact {
+  width: 50%;
+  color: #0f172a;
+  margin-top: 148px;
+}
+
+.contact h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact h1 span {
+  color: #0d9488;
+}
+
+.contact h2 {
+  font-size: 26px;
+  color: #0f766e;
+}
+
+.contact h3 {
+  font-size: 18px;
+  color: #64748b;
+}
+
+/* FORM */
+.form {
+  width: 45%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #b2f0e8;
+  box-shadow: 0 8px 30px rgba(13, 148, 136, 0.1);
+}
+
+form label {
+  margin-top: 12px;
+  color: #0f766e;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+form input,
 form textarea {
-  padding: 7px 12px;
+  padding: 10px 14px;
   margin-top: 6px;
   border: 1.5px solid #b2f0e8;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 15px;
   color: #0f172a;
   background: #f0fdfa;
   outline: none;
-  resize: none; /* removes the > resize handle */
   width: 100%;
-  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   transition: border-color 0.2s ease;
 }
 
+form textarea {
+  resize: none;
+  font-family: inherit;
+}
+
+form input:focus,
 form textarea:focus {
   border-color: #0d9488;
   background: #ffffff;
+}
+
+/* BUTTON */
+form input[type='submit'] {
+  width: 160px;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 25px;
+  background: #0d9488;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+form input[type='submit']:hover {
+  background: #0f766e;
+  transform: translateY(-2px);
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .navbar a {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .requirements {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .contact,
+  .form {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .contact h1 {
+    font-size: 30px;
+  }
+
+  .contact h2 {
+    font-size: 22px;
+  }
+
+  .contact h3 {
+    font-size: 16px;
+  }
+
+  form {
+    margin-top: 0;
+  }
+
+  form input[type='submit'] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h1 {
+    font-size: 26px;
+  }
+
+  .contact h2 {
+    font-size: 18px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
 }
